@@ -206,7 +206,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-27 14:50:00" itemprop="dateModified" datetime="2021-09-27T14:50:00+08:00">2021-09-27</time>
+        <time title="修改时间：2021-09-27 16:39:44" itemprop="dateModified" datetime="2021-09-27T16:39:44+08:00">2021-09-27</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -228,7 +228,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="hexo-gitHub-pages-使用指南"><a href="#hexo-gitHub-pages-使用指南" class="headerlink" title="hexo + gitHub pages 使用指南"></a>hexo + gitHub pages 使用指南</h1><h2 id="hexo-搭建"><a href="#hexo-搭建" class="headerlink" title="hexo 搭建"></a>hexo 搭建</h2><h3 id="hexo-搭建详细步骤"><a href="#hexo-搭建详细步骤" class="headerlink" title="hexo 搭建详细步骤"></a>hexo 搭建详细步骤</h3><ul>
+          <h1 id="hexo-gitHub-pages-使用指南"><a href="#hexo-gitHub-pages-使用指南" class="headerlink" title="hexo + gitHub pages 使用指南"></a>hexo + gitHub pages 使用指南</h1><h2 id="hexo-常用命令"><a href="#hexo-常用命令" class="headerlink" title="hexo 常用命令"></a>hexo 常用命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">本地调试</span><br><span class="line">hexo clean;hexo g;hexo s --debug  -p 4001</span><br><span class="line"></span><br><span class="line">远端部署</span><br><span class="line">hexo clean;hexo g;hexo d</span><br></pre></td></tr></table></figure>
+
+<h2 id="hexo-搭建"><a href="#hexo-搭建" class="headerlink" title="hexo 搭建"></a>hexo 搭建</h2><h3 id="hexo-搭建详细步骤"><a href="#hexo-搭建详细步骤" class="headerlink" title="hexo 搭建详细步骤"></a>hexo 搭建详细步骤</h3><ul>
 <li>安装必要工具：<br>sudo apt-get install nodejs<br>sudo apt-get install npm<ul>
 <li>如果 node不是最新，用下面的方法<br>sudo npm install -g n<br>node -v<br>sudo n latest<br>PATH=”$PATH”<br>node -v</li>
 </ul>
@@ -250,6 +252,9 @@
 
 <h4 id="切换主题布局"><a href="#切换主题布局" class="headerlink" title="切换主题布局"></a>切换主题布局</h4><p>Schemes  Muse 修改为 Pisces，可以有大纲预览</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>可以修改侧边栏的布局</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> sidebar:</span><br><span class="line">   # Sidebar Position.</span><br><span class="line"><span class="deletion">-  position: left</span></span><br><span class="line"><span class="deletion">-  #position: right</span></span><br><span class="line"><span class="addition">+  #position: left</span></span><br><span class="line"><span class="addition">+  position: right</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="修改导航菜单：添加分类-标签"><a href="#修改导航菜单：添加分类-标签" class="headerlink" title="修改导航菜单：添加分类/标签"></a>修改导航菜单：添加分类/标签</h4><ul>
 <li><p>修改配置文件</p>
@@ -278,7 +283,7 @@
 <h2 id="github-pages-搭建"><a href="#github-pages-搭建" class="headerlink" title="github pages 搭建"></a>github pages 搭建</h2><h3 id="创建github-pages"><a href="#创建github-pages" class="headerlink" title="创建github pages"></a>创建github pages</h3><p>注意Repository Name必须和你设置的用户名一致。其他默认，确定创建。<br>在浏览器中输入your username.github.io即可访问。</p>
 <h3 id="将-hexo-上传到github上"><a href="#将-hexo-上传到github上" class="headerlink" title="将 hexo 上传到github上"></a>将 hexo 上传到github上</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line">--- a/blog/_config.yml</span><br><span class="line">+++ b/blog/_config.yml</span><br><span class="line"> deploy:</span><br><span class="line">-  type: &#x27;&#x27;</span><br><span class="line">+  type: git</span><br><span class="line">+  repository: https://github.com/wenjwenwen/wenjwenwen.github.io.git</span><br><span class="line">+  branch: main</span><br><span class="line"></span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/84a8384be1ae">Hexo使用指南 - 简书</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8b14019d36d2">搭建自己的第一个博客 - 简书</a><br><a target="_blank" rel="noopener" href="https://sspai.com/post/59904">浅谈我为什么从 HEXO 迁移到 HUGO - 少数派</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/84a8384be1ae">Hexo使用指南 - 简书</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8b14019d36d2">搭建自己的第一个博客 - 简书</a><br><a target="_blank" rel="noopener" href="https://sspai.com/post/59904">浅谈我为什么从 HEXO 迁移到 HUGO - 少数派</a><br><a target="_blank" rel="noopener" href="https://neveryu.github.io/2016/09/03/hexo-next-one/">Hexo-NexT搭建个人博客（一） | Never_yu’s Blog</a></p>
 
       
     </div>
