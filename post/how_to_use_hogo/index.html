@@ -49,7 +49,7 @@
 <meta itemprop="name" content="how_to_use_hogo">
 <meta itemprop="description" content="如何搭建hugo 安装hugo 确定安装版本 uname -a 得到x86_64 Releases · gohugoio/hugo 安装 1 2 3 4 5 6 7 8 sudo apt-get install hugo 或者 sudo dpkg -i hugo*.deb $ hugo version hugo v0.88.1-5BC54738 linux/amd64 BuildDate=2021-09-04T09:39:19Z VendorInfo=gohugoio hugo help查看可以"><meta itemprop="datePublished" content="2021-09-28T14:19:35+08:00" />
 <meta itemprop="dateModified" content="2021-09-28T14:19:35+08:00" />
-<meta itemprop="wordCount" content="518">
+<meta itemprop="wordCount" content="521">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="how_to_use_hogo"/>
 <meta name="twitter:description" content="如何搭建hugo 安装hugo 确定安装版本 uname -a 得到x86_64 Releases · gohugoio/hugo 安装 1 2 3 4 5 6 7 8 sudo apt-get install hugo 或者 sudo dpkg -i hugo*.deb $ hugo version hugo v0.88.1-5BC54738 linux/amd64 BuildDate=2021-09-04T09:39:19Z VendorInfo=gohugoio hugo help查看可以"/>
@@ -327,6 +327,7 @@ git submodule add -b main https://github.com/wenjwenwen/wenjwenwen.github.io.git
 </span><span class="lnt">23
 </span><span class="lnt">24
 </span><span class="lnt">25
+</span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/sh
@@ -337,7 +338,8 @@ git submodule add -b main https://github.com/wenjwenwen/wenjwenwen.github.io.git
 <span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
 
 <span class="c1"># 构建静态内容</span>
-hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+<span class="c1">#hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+hugo  --buildDrafts
 
 <span class="c1"># 切换到 Public 文件夹</span>
 <span class="nb">cd</span> public
