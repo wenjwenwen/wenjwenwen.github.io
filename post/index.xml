@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on hhEven - A super concise theme for Hugo</title>
+    <link>http://wenjwenwen.github.io/post/</link>
+    <description>Recent content in Posts on hhEven - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Sep 2021 14:19:35 +0800</lastBuildDate><atom:link href="http://wenjwenwen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>how_to_use_hogo</title>
+      <link>http://wenjwenwen.github.io/post/how_to_use_hogo/</link>
+      <pubDate>Tue, 28 Sep 2021 14:19:35 +0800</pubDate>
+      
+      <guid>http://wenjwenwen.github.io/post/how_to_use_hogo/</guid>
+      <description>如何搭建hugo 安装hugo 确定安装版本 uname -a 得到x86_64 Releases · gohugoio/hugo 安装 1 2 3 4 5 6 7 8 sudo apt-get install hugo 或者 sudo dpkg -i hugo*.deb $ hugo version hugo v0.88.1-5BC54738 linux/amd64 BuildDate=2021-09-04T09:39:19Z VendorInfo=gohugoio hugo help查看可以</description>
+    </item>
+    
+  </channel>
+</rss>

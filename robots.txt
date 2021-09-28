@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://wenjwenwen.github.io/sitemap.xml
