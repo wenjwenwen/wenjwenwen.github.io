@@ -49,7 +49,7 @@
 <meta itemprop="name" content="how_to_use_hogo">
 <meta itemprop="description" content="如何搭建hugo 安装hugo 确定安装版本 uname -a 得到x86_64 Releases · gohugoio/hugo 安装 1 2 3 4 5 6 7 8 sudo apt-get install hugo 或者 sudo dpkg -i hugo*.deb $ hugo version hugo v0.88.1-5BC54738 linux/amd64 BuildDate=2021-09-04T09:39:19Z VendorInfo=gohugoio hugo help查看可以"><meta itemprop="datePublished" content="2021-09-28T14:19:35+08:00" />
 <meta itemprop="dateModified" content="2021-09-28T14:19:35+08:00" />
-<meta itemprop="wordCount" content="515">
+<meta itemprop="wordCount" content="518">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="how_to_use_hogo"/>
 <meta name="twitter:description" content="如何搭建hugo 安装hugo 确定安装版本 uname -a 得到x86_64 Releases · gohugoio/hugo 安装 1 2 3 4 5 6 7 8 sudo apt-get install hugo 或者 sudo dpkg -i hugo*.deb $ hugo version hugo v0.88.1-5BC54738 linux/amd64 BuildDate=2021-09-04T09:39:19Z VendorInfo=gohugoio hugo help查看可以"/>
@@ -283,6 +283,7 @@ hugo server --buildDrafts -w
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">## 准备工作</span>
@@ -293,7 +294,8 @@ git submodule add -b main https://github.com/wenjwenwen/wenjwenwen.github.io.git
 +baseURL <span class="o">=</span> <span class="s2">&#34;https://wenjwenwen.github.io/&#34;</span>
 
 <span class="c1">##steps:</span>
-hugo --theme<span class="o">=</span>even --baseUrl<span class="o">=</span><span class="s2">&#34;http://wenjwenwen.github.io/&#34;</span> --buildDrafts
+<span class="c1">#hugo --theme=even --baseUrl=&#34;http://wenjwenwen.github.io/&#34; --buildDrafts</span>
+<span class="c1">#hugo  --buildDrafts</span>
 ./deploy.sh
 </code></pre></td></tr></table>
 </div>
@@ -355,8 +357,8 @@ git push origin main
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="参考文章">参考文章</h2>
-<p><a href="https://www.jianshu.com/p/8b14019d36d2">搭建自己的第一个博客 - 简书</a>
-<a href="https://www.waynerv.com/posts/setup-blog-with-hugo-and-github-pages/">使用 Hugo 和 GitHub Pages 搭建静态博客 | Shall We Code?</a></p>
+<p><a href="https://www.jianshu.com/p/8b14019d36d2">搭建自己的第一个博客 - 简书</a></p>
+<p><a href="https://www.waynerv.com/posts/setup-blog-with-hugo-and-github-pages/">使用 Hugo 和 GitHub Pages 搭建静态博客 | Shall We Code?</a></p>
 
     </div>
 
